@@ -34,4 +34,39 @@ button {
   border-radius: 5px;
   border: 1px solid #222;
   display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+main {
+  flex: 1;
+  padding: 10px 20px;
+}
+
+h2 {
+  border-bottom: 1px solid #222;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+h3 {
+  background-color: #fff;
+  border-bottom: 1px solid #222;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  margin: 20px 0 0;
+}
+
+.person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
