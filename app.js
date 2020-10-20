@@ -58,6 +58,7 @@ function formatNumber(number) {
 
 addUserBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
+sortBtn.addEventListener("click", sortByRichest);
 
 console.log(data);
 
@@ -67,6 +68,13 @@ function doubleMoney() {
     //   return and update
     return { ...user, money: user.money * 2 };
   });
+
+  updateDOM();
+}
+
+//  Sort sortByRichest
+function sortByRichest() {
+  data.sort((a, b) => b.money - a.money);
 
   updateDOM();
 }
