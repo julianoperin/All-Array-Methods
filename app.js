@@ -53,11 +53,20 @@ function formatNumber(number) {
   return "$" + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
 }
 
-console.log(data);
-
 // Event listeners
 // Add User
 
 addUserBtn.addEventListener("click", getRandomUser);
+doubleBtn.addEventListener("click", doubleMoney);
 
 console.log(data);
+
+// double money functionality
+function doubleMoney() {
+  data = data.map((user) => {
+    //   return and update
+    return { ...user, money: user.money * 2 };
+  });
+
+  updateDOM();
+}
