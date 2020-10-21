@@ -60,6 +60,7 @@ addUserBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
 sortBtn.addEventListener("click", sortByRichest);
 showMillionairesBtn.addEventListener("click", filterMillionaires);
+calculateWealthBtn.addEventListener("click", calculateTotalWealth);
 
 console.log(data);
 
@@ -84,4 +85,18 @@ function sortByRichest() {
 function filterMillionaires() {
   data = data.filter((item) => item.money > 1000000);
   updateDOM();
+}
+
+// Using reduce to calculate total wealth
+
+function calculateTotalWealth() {
+  let totalWealth = data.reduce((acc, user) => (acc += user.money), 0);
+
+  const totalWealthDom = document.createElement("div");
+  totalWealthDom.classList.add("person");
+  totalWealthDom.classList.add("personSize");
+  totalWealthDom.innerHTML = `<strong>Total Wealth:</strong> ${formatNumber(
+    totalWealth
+  )}`;
+  main.appendChild(totalWealthDom);
 }

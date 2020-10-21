@@ -70,3 +70,9 @@ h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
+
+.personSize {
+  font-size: 22px;
+  border-top: 1px solid #222;
+  padding: 10px;
+}
