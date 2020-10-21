@@ -59,6 +59,7 @@ function formatNumber(number) {
 addUserBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
 sortBtn.addEventListener("click", sortByRichest);
+showMillionairesBtn.addEventListener("click", filterMillionaires);
 
 console.log(data);
 
@@ -76,5 +77,11 @@ function doubleMoney() {
 function sortByRichest() {
   data.sort((a, b) => b.money - a.money);
 
+  updateDOM();
+}
+
+// Filter only millionaires
+function filterMillionaires() {
+  data = data.filter((item) => item.money > 1000000);
   updateDOM();
 }
